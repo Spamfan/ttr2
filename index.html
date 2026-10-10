@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>TNK-CE // Combat Sandbox v0.0.1</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="game-canvas"></canvas>
+
+  <div id="hud-overlay">
+    <div id="hud-top">
+      <div class="hud-panel scrap-box">
+        <span class="hud-label">SCRAP</span>
+        <span id="scrap-count" class="hud-value">0000</span>
+      </div>
+      <div class="hud-panel weapon-box">
+        <span class="hud-label">MOUNT</span>
+        <span id="weapon-name" class="hud-value">PEASHOOTER</span>
+      </div>
+      <button id="shop-toggle-btn" class="hud-btn">ARMORY</button>
+    </div>
+
+    <div id="radio-banner" class="hud-panel radio-toast">
+      <span class="radio-tag">[DISPATCH]</span>
+      <span id="radio-text">DRIVE FORWARD. TRY NOT TO DENT THE PAINT.</span>
+    </div>
+
+    <!-- Mobile Touch Joysticks -->
+    <div id="touch-controls">
+      <div id="stick-move-zone" class="stick-zone">
+        <div id="stick-move-base" class="stick-base">
+          <div id="stick-move-knob" class="stick-knob"></div>
+        </div>
+      </div>
+      <div id="stick-aim-zone" class="stick-zone">
+        <div id="stick-aim-base" class="stick-base">
+          <div id="stick-aim-knob" class="stick-knob"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Armory Modal -->
+  <div id="shop-modal" class="modal-hidden">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2>TACTICAL SURPLUS (NO REFUNDS)</h2>
+        <button id="shop-close-btn" class="hud-btn">X</button>
+      </div>
+      <div id="shop-inventory" class="inventory-list"></div>
+    </div>
+  </div>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
